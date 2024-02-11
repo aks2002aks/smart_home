@@ -153,15 +153,6 @@ function Login({}: Props) {
                   </div>
                 </form>
 
-                <p className="mt-6 text-sm text-center text-gray-400 cursor-default">
-                  Don&#x27;t have an account yet ?{" "}
-                  <Link
-                    to={"/signup"}
-                    className="text-orange-500 focus:outline-none focus:underline hover:underline"
-                  >
-                    Sign up
-                  </Link>
-                </p>
 
                 <div className="flex items-center justify-center mt-6">
                   <div className="border-b border-gray-400 w-full mr-4"></div>
@@ -172,7 +163,7 @@ function Login({}: Props) {
                 <p className="mt-6 text-sm text-center text-gray-400 cursor-default">
                   Have Trouble Signing in ? Email at{" "}
                   <span className="text-orange-500 cursor-text">
-                    admin@SmartHome.com
+                    admin@SmartHome.com (Demo Mail)
                   </span>
                 </p>
               </div>
