@@ -49,8 +49,6 @@ function AllocateDeviceModal({
   ) => {
     if (event.key === "Enter") {
       // Call your function here
-      console.log("Enter key pressed");
-      console.log(searchUsername);
       SearchUsername();
     }
   };

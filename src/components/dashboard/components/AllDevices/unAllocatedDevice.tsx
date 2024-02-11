@@ -40,7 +40,7 @@ function UnAllocatedDevice({}: Props) {
           },
         }
       );
-      console.log(response.data);
+
       const newData = response.data.data;
       setUnAllocatedDevices((prevData) => [...prevData, ...newData]);
 

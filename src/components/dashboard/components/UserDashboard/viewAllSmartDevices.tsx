@@ -39,7 +39,7 @@ function ViewAllSmartDevices({}: Props) {
           },
         }
       );
-      console.log(response.data);
+
       const newData = response.data.data;
       setDevices((prevData) => [...prevData, ...newData]);
 

@@ -38,7 +38,8 @@ function AllocatedDevice({}: Props) {
           },
         }
       );
-      console.log(response.data);
+
+      
       const newData = response.data.data;
       setAllocatedDevices((prevData) => [...prevData, ...newData]);
 

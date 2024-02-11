@@ -50,7 +50,7 @@ function ManageSmartDevices({}: Props) {
           },
         }
       );
-      console.log(response.data);
+
       const newData = response.data.data;
       setDevices((prevData) => [...prevData, ...newData]);
 
@@ -80,7 +80,7 @@ function ManageSmartDevices({}: Props) {
             },
           }
         );
-        console.log(response.data);
+
         setRooms(response.data.data);
         setFreeRoom(
           response.data.data.filter(
@@ -118,7 +118,7 @@ function ManageSmartDevices({}: Props) {
           },
         }
       );
-      console.log(response.data);
+
       const { success } = response.data;
       if (success) {
         toast.success("Device removed from room successfully");
@@ -137,7 +137,7 @@ function ManageSmartDevices({}: Props) {
           },
         }
       );
-      console.log(response.data);
+
       setRooms(response.data.data);
       setFreeRoom(
         response.data.data.filter(
@@ -234,7 +234,10 @@ function ManageSmartDevices({}: Props) {
                     </button>
                     <button
                       className="hover:bg-[#141414] bg-[#424141] text-white text-sm p-2 rounded"
-                      onClick={removeDeviceFromRoom}
+                      onClick={() => {
+                        setSelectedDeviceId(device._id);
+                        removeDeviceFromRoom();
+                      }}
                     >
                       Remove Room
                     </button>

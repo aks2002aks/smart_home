@@ -52,7 +52,7 @@ function RoomDeviceAllocationModal({
           },
         }
       );
-      console.log(response.data);
+
     } catch (error: any) {}
 
     try {
@@ -69,7 +69,7 @@ function RoomDeviceAllocationModal({
           },
         }
       );
-      console.log(response.data);
+
       const { success } = response.data;
       if (success) {
         toast.success("Room assigned successfully");
