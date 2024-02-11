@@ -104,12 +104,12 @@ function ManageSmartDevices({}: Props) {
     return room !== undefined ? true : false;
   };
 
-  const removeDeviceFromRoom = async () => {
+  const removeDeviceFromRoom = async (deviceId: string) => {
     try {
       const response = await axios.post(
         `${process.env.REACT_APP_PUBLIC_API_URL}/api/removeDeviceFromRoom`,
         {
-          deviceId: selectedDeviceId,
+          deviceId,
         },
         {
           headers: {
@@ -236,7 +236,7 @@ function ManageSmartDevices({}: Props) {
                       className="hover:bg-[#141414] bg-[#424141] text-white text-sm p-2 rounded"
                       onClick={() => {
                         setSelectedDeviceId(device._id);
-                        removeDeviceFromRoom();
+                        removeDeviceFromRoom(device._id);
                       }}
                     >
                       Remove Room
